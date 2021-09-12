@@ -44,3 +44,16 @@ print(f"\nPrecio compra: ${precio_compra+precio_aux}"
       f"\nBalota sacada: {descuento}"
       f"\nDescuento ganado {descuento_text}: ${precio_aux}"
       f"\nTotal a pagar: ${precio_compra}")
+
+# Punto 3 --------------------------------------------------------------------
+
+fianza = int(input("Valor de la fianza: "))
+
+if fianza >= 50000:
+    fianza_aux = fianza*0.02
+    descuento = "2%"
+else:
+    fianza_aux = fianza*0.03
+    descuento = "3%"
+print(f"\nEl monto por el cual se aplico la fianza es de {fianza}\n"
+      f"la cuota a pagar sera del {descuento} del monto: ${fianza_aux}\n")
