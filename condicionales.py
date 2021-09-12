@@ -57,3 +57,23 @@ else:
     descuento = "3%"
 print(f"\nEl monto por el cual se aplico la fianza es de {fianza}\n"
       f"la cuota a pagar sera del {descuento} del monto: ${fianza_aux}\n")
+
+# Punto 4 --------------------------------------------------------------------
+
+ganancia = int(input("Cuanto es la ganacia diaria de la empresa: $"))
+total = 0
+
+for x in range(5):
+    cantidad = int(input(f"Cantidad de emitida el dia #{x+1}: "))
+    total = total + cantidad
+
+if total > 170:
+    pago = (ganancia*0.50)
+    lista = [total, "Parar 1 semana", "Pagar 50% de la ganancia diaria", pago]
+else:
+    lista = [total, "No aplica", "No aplica", "0"]
+print("---------- INFORME ----------")
+print(f"\nCantidad emitida: {lista[0]}\n"
+      f"Sanción: {lista[1]}\n"
+      f"Multa: {lista[2]}\n"
+      f"Valor a pagar: ${lista[3]}")
