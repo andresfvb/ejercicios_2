@@ -196,3 +196,12 @@ else:
     resultado_txt = f"El numero {numero_2} es mayor que el numero {numero_1}\ny se suman"
 
 print(f"{resultado_txt} dando como resultado: {resultado}")
+
+# Punto 10 --------------------------------------------------------------------
+
+aux = 0
+for x in range(3):
+    mayor = float(input(f"Digite el valor #{x+1}: "))
+    if mayor > aux:
+        aux = mayor
+print(f"El numero mayor de los 3 ingresados es: {aux}")
