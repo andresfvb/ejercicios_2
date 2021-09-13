@@ -77,3 +77,25 @@ print(f"\nCantidad emitida: {lista[0]}\n"
       f"Sanción: {lista[1]}\n"
       f"Multa: {lista[2]}\n"
       f"Valor a pagar: ${lista[3]}")
+
+# Punto 5 --------------------------------------------------------------------
+
+valor = int(input("Valor del inmueble y el carro: $"))
+
+devaluacion_anual = valor*0.27
+devaluacion_consecuente = valor*0.10
+incremento_anual = valor*0.10
+
+devaluacion_total = devaluacion_anual+(devaluacion_consecuente*2)
+incremento_total = incremento_anual*3
+
+if devaluacion_total < (incremento_total/2):
+    comprarlo = "Debe comprarlo"
+else:
+    comprarlo = "No debe comprarlo"
+print("\nNota:\n- La devaluación del auto es de 27% el primer año y 10% "
+      "los años consecuentes"
+      "\n- El incremento de los terrenos es del 10% anual"
+      f"\nDevaluación total: ${devaluacion_total}"
+      f"\nMitad del incremento anual del terreno: ${incremento_total}"
+      f"\n{comprarlo}")
