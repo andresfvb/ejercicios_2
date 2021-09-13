@@ -99,3 +99,25 @@ print("\nNota:\n- La devaluación del auto es de 27% el primer año y 10% "
       f"\nDevaluación total: ${devaluacion_total}"
       f"\nMitad del incremento anual del terreno: ${incremento_total}"
       f"\n{comprarlo}")
+
+# Punto 6 --------------------------------------------------------------------
+
+cant_computador = int(input("Cuantos computadores llevara: "))
+total = cant_computador*11000
+if cant_computador < 5:
+    total_aux = total*0.10
+    total = total-total_aux
+    descuento = "10%"
+elif cant_computador >= 5 and cant_computador < 10:
+    total_aux = total*0.20
+    total = total-total_aux
+    descuento = "20%"
+else:
+    total_aux = total_aux*0.40
+    total = total-total_aux
+    descuento = "40%"
+
+print(f"\nCantidad de computadoras: {cant_computador}"
+      f"\nDescuento a aplicado {descuento}: ${total_aux}"
+      f"\nValor antes de descuento: ${total+total_aux}"
+      f"\nValor a pagar: ${total}")
