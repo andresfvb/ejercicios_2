@@ -121,3 +121,38 @@ print(f"\nCantidad de computadoras: {cant_computador}"
       f"\nDescuento a aplicado {descuento}: ${total_aux}"
       f"\nValor antes de descuento: ${total+total_aux}"
       f"\nValor a pagar: ${total}")
+
+# Punto 7 --------------------------------------------------------------------
+
+equipo = int(input("Que marca desea comprar:\n"
+                   "1. Samsung\n2. Panasonic\n3. Nosy\n"
+                   "Escriba el numero de la marca: "))
+equipos_lista = ["Samsung", "Panasonic", "Nosy"]
+precio = int(input("Precio del equipo que desea comprar: $"))
+desc_marca = 0
+descuentom = "0%"
+descuentop = "0%"
+precio_m = 0
+precio_aux = 0
+
+if precio >= 2000:
+    precio_aux = precio*0.10
+    descuentop = "10%"
+    precio = precio-precio_aux
+if equipo == 3:
+    desc_marca = precio*0.05
+    descuentom = "5%"
+    precio = precio-desc_marca
+iva = precio*0.16
+
+print(f"\nEl equipo que desea llevar es de marca: {equipos_lista[equipo-1]}"
+      "\n------Valores antes de IVA-------"
+      f"\nValor antes de descuentos: ${precio+precio_aux+desc_marca}"
+      f"\nDescuento por valor producto {descuentop}: ${precio_aux}"
+      f"\nPrecio de producto con descuento de P.: ${precio+desc_marca}"
+      f"\nDescuento marca {descuentom}: ${desc_marca}"
+      f"\nPrecio de producto con descuento de M.: {precio_m}"
+      f"\nValor producto antes de IVA: ${precio}"
+      f"\n------Valores despues de IVA"
+      f"\nIVA 16%: ${iva}"
+      f"\nTotal a pagar: ${precio+iva}")
