@@ -156,3 +156,27 @@ print(f"\nEl equipo que desea llevar es de marca: {equipos_lista[equipo-1]}"
       f"\n------Valores despues de IVA"
       f"\nIVA 16%: ${iva}"
       f"\nTotal a pagar: ${precio+iva}")
+
+# Punto 8 --------------------------------------------------------------------
+
+valor_compra = int(input("Valor de la compra: $"))
+banco = 0
+if valor_compra > 500000:
+    empresa = valor_compra*0.55
+    banco = valor_compra*0.30
+    credito = valor_compra*0.15
+    empresa_txt = "55%"
+    banco_txt = "30%"
+    credito_txt = "15%"
+else:
+    empresa = valor_compra*0.70
+    credito = valor_compra*0.30
+    empresa_txt = "70%"
+    credito_txt = "30%"
+    banco_txt = "No aplica"
+interes = credito*0.20
+print(f"\n-------Factura-------\nValor de la compra: ${valor_compra}\n"
+      f"Valor invertida por la empresa {empresa_txt}: ${empresa}\n"
+      f"Valor de prestamo al banco {banco_txt}: ${banco}\n"
+      f"Valor del credito con el fabricante {credito_txt}: ${credito}\n"
+      f"Intereses 20%: ${interes}")
