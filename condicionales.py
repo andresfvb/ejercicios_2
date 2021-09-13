@@ -180,3 +180,19 @@ print(f"\n-------Factura-------\nValor de la compra: ${valor_compra}\n"
       f"Valor de prestamo al banco {banco_txt}: ${banco}\n"
       f"Valor del credito con el fabricante {credito_txt}: ${credito}\n"
       f"Intereses 20%: ${interes}")
+
+# Punto 9 --------------------------------------------------------------------
+
+numero_1 = float(input("Digite el primer numero "))
+numero_2 = float(input("\nDigite el segundo numero "))
+if numero_1 == numero_2:
+    resultado = numero_1*numero_2
+    resultado_txt = "Los numeros son iguales y se multiplican"
+elif numero_1 > numero_2:
+    resultado = numero_1-numero_2
+    resultado_txt = f"El numero {numero_1} es mayor que el numero {numero_2}\ny se restan"
+else:
+    resultado = numero_1+numero_2
+    resultado_txt = f"El numero {numero_2} es mayor que el numero {numero_1}\ny se suman"
+
+print(f"{resultado_txt} dando como resultado: {resultado}")
